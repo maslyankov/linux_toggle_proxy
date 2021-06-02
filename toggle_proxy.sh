@@ -23,6 +23,8 @@ if [ "$set_proxy" = "true" ]
 then
         echo 'Acquire::http::Proxy "http://myproxy:8080";' > /etc/apt/apt.conf
         echo 'Acquire::https::Proxy "http://myproxy:8080";' >> /etc/apt/apt.conf
+        echo "Setting proxy for apt..."
 else
         echo '' > /etc/apt/apt.conf
+        echo "Unsetting proxy for apt..."
 fi
